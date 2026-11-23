@@ -94,7 +94,7 @@ Conforme o roteiro da Entrega 04, a modalidade escolhida é **DAS**, com:
 5. Seleção do fluxo de emissão de respostas como recorte demonstrável, por possuir modelagem, código TypeScript e vídeo referenciado na entrega anterior.
 6. Consulta aos módulos `dominio.ts`, `resposta.ts`, `fabricas.ts`, `main.ts` e à configuração de execução da demonstração Factory Method.
 7. Elaboração das visões e das tabelas de rastreabilidade.
-8. Organização da demonstração na pasta [Código](C%C3%B3digo/README.html), com seleção de cenários pelo terminal e testes de comportamento.
+8. Organização da demonstração na pasta [Código](Codigo\README.md), com seleção de cenários pelo terminal e testes de comportamento.
 
 O recorte adotado é a emissão de respostas a pedidos de acesso à informação. A escolha permite acompanhar o mesmo fluxo nas classes, nos módulos de código e na execução. Os demais padrões das entregas anteriores são mantidos como contexto, sem presumir que todos já estejam integrados.
 
@@ -170,7 +170,7 @@ As referências completas e os endereços consultáveis estão na seção **Refe
 
 As fontes principais são as [Entregas 01][R1], [02][R2] e [03][R3], os relatórios de padrões [R4–R6], o [código de origem do Factory Method][R7] e o [modelo de DAS][R9].
 
-A versão utilizada nesta entrega está em [Código](C%C3%B3digo/README.html). Os links dos arquivos e dos diagramas aparecem junto às respectivas visões.
+A versão utilizada nesta entrega está em [Código](Codigo\README.md). Os links dos arquivos e dos diagramas aparecem junto às respectivas visões.
 
 As referências legais [R12–R14] servem para consulta e validação pela equipe; os exemplos de código não constituem interpretação jurídica completa nem comprovação de conformidade.
 
@@ -294,9 +294,9 @@ A solução é dividida em quatro agrupamentos de responsabilidade. Eles represe
 
 **Diagrama de pacotes**
 
-![Visão lógica — diagrama de pacotes](C%C3%B3digo/diagramas/01-pacotes.svg)
+![Visão lógica — diagrama de pacotes](Codigo\diagramas\01-pacotes.svg)
 
-[Ampliar imagem vetorial sem perda de qualidade](C%C3%B3digo/diagramas/01-pacotes.svg)
+[Ampliar imagem vetorial sem perda de qualidade](Codigo\diagramas\01-pacotes.svg)
 
 O agente depende da abstração `FabricaResposta`, e não das três classes concretas de resposta. A composição da demonstração continua conhecendo as fábricas concretas, pois é nesse ponto que se escolhe qual delas utilizar.
 
@@ -306,7 +306,7 @@ Há dependências de tipos entre domínio e criação. Por isso, a divisão não
 
 ##### 5.2.1 Pedidos e agentes
 
-Código: [dominio.ts](C%C3%B3digo/src/dominio.ts).
+Código: [dominio.ts](Codigo\src\dominio.ts).
 
 | Classe ou tipo | Responsabilidade | Elementos relevantes |
 | --- | --- | --- |
@@ -318,7 +318,7 @@ Código: [dominio.ts](C%C3%B3digo/src/dominio.ts).
 
 ##### 5.2.2 Criação de respostas
 
-Código: [fabricas.ts](C%C3%B3digo/src/fabricas.ts).
+Código: [fabricas.ts](Codigo\src\fabricas.ts).
 
 | Elemento | Responsabilidade |
 | --- | --- |
@@ -333,7 +333,7 @@ O método `emitirResposta()` executa uma sequência comum: validar o texto, cria
 
 ##### 5.2.3 Respostas
 
-Código: [resposta.ts](C%C3%B3digo/src/resposta.ts).
+Código: [resposta.ts](Codigo\src\resposta.ts).
 
 | Classe | Papel | Dados e operações |
 | --- | --- | --- |
@@ -344,9 +344,9 @@ Código: [resposta.ts](C%C3%B3digo/src/resposta.ts).
 
 **Diagrama de classes**
 
-![Classes significativas — emissão de respostas](C%C3%B3digo/diagramas/02-classes.svg)
+![Classes significativas — emissão de respostas](Codigo\diagramas\02-classes.svg)
 
-[Ampliar imagem vetorial sem perda de qualidade](C%C3%B3digo/diagramas/02-classes.svg)
+[Ampliar imagem vetorial sem perda de qualidade](Codigo\diagramas\02-classes.svg)
 
 O diagrama destaca somente as classes principais e os relacionamentos do Factory Method. Detalhes de atributos e validações permanecem no código, para facilitar a leitura do modelo.
 
@@ -371,9 +371,9 @@ O programa executa em um único processo Node.js. As chamadas entre agente, fáb
 
 **Diagrama de sequência**
 
-![Sequência de emissão de uma resposta parcial](C%C3%B3digo/diagramas/03-sequencia.svg)
+![Sequência de emissão de uma resposta parcial](Codigo\diagramas\03-sequencia.svg)
 
-[Ampliar imagem vetorial sem perda de qualidade](C%C3%B3digo/diagramas/03-sequencia.svg)
+[Ampliar imagem vetorial sem perda de qualidade](Codigo\diagramas\03-sequencia.svg)
 
 A execução começa pela escolha do cenário, passa pela emissão e termina com a apresentação dos resultados. Sem argumento, os quatro cenários são executados em sequência.
 
@@ -392,9 +392,9 @@ O código é executado no terminal de um computador com Node.js 22.18 ou superio
 
 **Diagrama de implantação**
 
-![Implantação da demonstração local e da documentação](C%C3%B3digo/diagramas/04-implantacao.svg)
+![Implantação da demonstração local e da documentação](Codigo\diagramas\04-implantacao.svg)
 
-[Ampliar imagem vetorial sem perda de qualidade](C%C3%B3digo/diagramas/04-implantacao.svg)
+[Ampliar imagem vetorial sem perda de qualidade](Codigo\diagramas\04-implantacao.svg)
 
 Os arquivos TypeScript são transformados pelo próprio Node.js durante a execução, por meio da opção `--experimental-transform-types`. Não é gerado um diretório `dist/`.
 
@@ -408,7 +408,7 @@ Os diagramas aparecem diretamente neste relatório em **SVG**, formato vetorial 
 
 #### 8.1 Visão geral
 
-Todo o código necessário aos cenários está na pasta [Código](C%C3%B3digo/README.html):
+Todo o código necessário aos cenários está na pasta [Código](Codigo\README.md):
 
 ```text
 Código/
@@ -433,18 +433,18 @@ Código/
 
 | Arquivo | Conteúdo | Correspondência no modelo |
 | --- | --- | --- |
-| [dominio.ts](C%C3%B3digo/src/dominio.ts) | Pedido, agente e status | Pedidos e agentes |
-| [resposta.ts](C%C3%B3digo/src/resposta.ts) | Produtos do Factory Method | Respostas |
-| [fabricas.ts](C%C3%B3digo/src/fabricas.ts) | Validação e criação | Criação de respostas |
-| [main.ts](C%C3%B3digo/src/main.ts) | Cenários e seleção pelo terminal | Demonstração |
-| [factory-method.test.ts](C%C3%B3digo/tests/factory-method.test.ts) | Testes de domínio, fábricas e comandos | Verificação dos comportamentos |
-| [package.json](C%C3%B3digo/package.json) | Scripts de execução e requisito de Node.js | Configuração do ambiente |
+| [dominio.ts](Codigo\src\dominio.ts) | Pedido, agente e status | Pedidos e agentes |
+| [resposta.ts](Codigo\src\resposta.ts) | Produtos do Factory Method | Respostas |
+| [fabricas.ts](Codigo\src\fabricas.ts) | Validação e criação | Criação de respostas |
+| [main.ts](Codigo\src\main.ts) | Cenários e seleção pelo terminal | Demonstração |
+| [factory-method.test.ts](Codigo\tests\factory-method.test.ts) | Testes de domínio, fábricas e comandos | Verificação dos comportamentos |
+| [package.json](Codigo\package.json) | Scripts de execução e requisito de Node.js | Configuração do ambiente |
 
 **Diagrama de componentes**
 
-![Visão da implementação — componentes e dependências](C%C3%B3digo/diagramas/05-componentes.svg)
+![Visão da implementação — componentes e dependências](Codigo\diagramas\05-componentes.svg)
 
-[Ampliar imagem vetorial sem perda de qualidade](C%C3%B3digo/diagramas/05-componentes.svg)
+[Ampliar imagem vetorial sem perda de qualidade](Codigo\diagramas\05-componentes.svg)
 
 O código adapta a demonstração da Entrega 03. A estrutura do padrão foi mantida; as mudanças locais estão no formato dos imports, na execução direta, nos dados fictícios, na seleção de cenários e nas verificações.
 
@@ -460,9 +460,9 @@ A divisão abaixo organiza responsabilidades. Não corresponde a máquinas difer
 
 **Diagrama dos agrupamentos**
 
-![Agrupamentos de responsabilidade do código](C%C3%B3digo/diagramas/06-camadas.svg)
+![Agrupamentos de responsabilidade do código](Codigo\diagramas\06-camadas.svg)
 
-[Ampliar imagem vetorial sem perda de qualidade](C%C3%B3digo/diagramas/06-camadas.svg)
+[Ampliar imagem vetorial sem perda de qualidade](Codigo\diagramas\06-camadas.svg)
 
 O modelo de domínio utiliza contratos de tipos da criação. A opção `import type` evita uma dependência de valores em execução, mas não elimina o vínculo conceitual entre esses módulos.
 
@@ -497,7 +497,7 @@ npm start -- indeferida
 npm start -- invalida
 ```
 
-Não há dependências externas para instalar. O passo a passo completo, os requisitos e a solução de problemas estão no [guia da pasta Código](C%C3%B3digo/README.html).
+Não há dependências externas para instalar. O passo a passo completo, os requisitos e a solução de problemas estão no [guia da pasta Código](Codigo\README.mdl).
 
 O Node.js transforma a sintaxe TypeScript ao executar. Esse procedimento não realiza checagem estática de tipos. Os testes verificam os comportamentos em tempo de execução.
 
@@ -572,9 +572,9 @@ O resultado permite demonstrar a separação de responsabilidades na criação d
 
 ## Vídeo de Demonstração
 
-**Apresentação da entrega:** [assistir no YouTube](https://youtu.be/_YWNdGMWvoI).
+**Apresentação da entrega:** [assistir Drive](https://drive.google.com/file/d/1h98MB4IJoUllIcAKa3WGpjRWYQtm_fIJ/view?usp=sharing).
 
-O código pode ser acompanhado em [main.ts](C%C3%B3digo/src/main.ts). O comando `npm start` executa os quatro cenários; os argumentos permitem mostrar cada um separadamente.
+O código pode ser acompanhado em [main.ts](Codigo\src\main.ts). O comando `npm start` executa os quatro cenários; os argumentos permitem mostrar cada um separadamente.
 
 | Cenário | O que observar no terminal |
 | --- | --- |
@@ -589,26 +589,22 @@ Ao concluir todos os cenários, o programa apresenta:
 Todos os quatro cenários passaram nas verificações.
 ```
 
-O endereço do vídeo foi preservado conforme o registro de participação da equipe. As imagens SVG e as cópias PNG estão na [seção de diagramas do guia do código](C%C3%B3digo/README.html#9-abrir-os-diagramas).
-
 ---
 
 # FOCO 2 — IA Generativa
-
-O roteiro da disciplina solicita as lições aprendidas e uma avaliação crítica do uso de IA generativa por cada participante. Esta seção é destinada aos relatos individuais de André João e Tiago, sem atribuir aos demais membros participação nesta entrega.
 
 ## Participantes no Foco 2
 
 | Nome do membro | Lições aprendidas | Uso da IA generativa com senso crítico |
 | --- | --- | --- |
-| André João | Relato individual a registrar pelo integrante | Relato individual a registrar pelo integrante |
+| André João | Usei a IA para pegar uma base de como fazer o relatório, levando em conta os documentos anteriores, isso me fez entender como que da para juntar um projeto grande em um único documento | Ela ajuda bastante, mas erra bastante, foram feitas modificações, verificações, pois haviam erros, precisei reescrever bastante coisa. |
 | Tiago Scherrer | Relato individual a registrar pelo integrante | Relato individual a registrar pelo integrante |
 
 ## Metodologia do Foco 2
 
-Cada relato deve relacionar uma atividade realizada, um conceito aprendido e a forma como as sugestões foram avaliadas. Os pontos relevantes incluem a diferença entre padrão de projeto e estilo arquitetural, a correspondência entre modelo e código e os limites da simulação.
+André João
 
-O uso de uma ferramenta não substitui a conferência das referências e da execução. Caso o integrante não tenha utilizado IA em determinada atividade, deve registrar isso diretamente.
+Usei prompts, para gerar as imagens de diagramas, e para gerar um exemplo a ser seguido, e depois do exemplo que me foi gerado, comparei ele com o que outros coelgas tinham feito, e fui alterando e mexendo no que julguei melhor. Reescrevi bastante coisa, usei um pouco do que os colegas fizeram, e fui melhorando da melhor forma possível.
 
 ---
 
