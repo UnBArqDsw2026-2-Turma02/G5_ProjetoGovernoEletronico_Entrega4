@@ -1,0 +1,14 @@
+{
+  "name": "governo-eletronico-entrega-04",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Demonstração de emissão de respostas LAI com Factory Method.",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "start": "node --experimental-transform-types src/main.ts",
+    "test": "node --experimental-transform-types --test tests/factory-method.test.ts"
+  }
+}
