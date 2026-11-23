@@ -33,7 +33,7 @@
 
 ---
 
-## FOCO 1 - DAS
+# FOCO 1 - DAS
 
 O foco deste relatório é escrever sobre as decisões arquiteturais do projeto, mantendo rastreabilidade com os artefatos anteriores e distinguindo o sistema conceitual das demonstrações realizadas.
 
@@ -44,7 +44,7 @@ Conforme o roteiro da Entrega 04, a modalidade escolhida neste exemplo é **DAS*
 - evidência de funcionalidades em execução;
 - pontos de vista individuais sobre lições aprendidas e uso crítico de IA generativa.
 
-### Participantes no Foco 1
+## Participantes no Foco 1
 
 | Nome do membro | Participação na Entrega 04 | Evidência |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ Conforme o roteiro da Entrega 04, a modalidade escolhida neste exemplo é **DAS*
 | Tiago Scherrer | Desenvolvimento do Projeto | link do Vídeo| 
 
 
-### Metodologia do Foco 1
+## Metodologia do Foco 1
 
 1. Leitura do roteiro local da Entrega 04 e do modelo Word de Documento de Arquitetura de Software.
 2. Consulta ao módulo de Arquitetura de Software da disciplina.
@@ -62,6 +62,71 @@ Conforme o roteiro da Entrega 04, a modalidade escolhida neste exemplo é **DAS*
 6. Consulta aos módulos `dominio.ts`, `resposta.ts`, `fabricas.ts`, `main.ts` e à configuração de execução da demonstração Factory Method.
 7. Elaboração das visões e das tabelas de rastreabilidade, sem executar o código nem modificar os repositórios de origem.
 
+## DAS
+
+### Histórico da revisão do DAS
+
+| Data | Versão | Descrição | Autoria / validação |
+| --- | --- | --- | --- |
+| 22/11/2026 | 0.1 | Verificação do desenvolvimento do projeto | André Gomes e Tiago Scherrer|
+
+### 1. Introdução
+
+Este documento tem como objetivo, mostras as visões arquiteturais necessárias para mostrar como funciona o pedido de acesso a informações do informa.BR.
+
+#### 1.1 Finalidade
+
+Este Documento apresenta a organização e as decisões significativas do Projeto Governo Eletrônico, com ênfase na emissão de respostas a pedidos de acesso à informação.
+
+#### 1.2 Escopo
+
+O domínio estudado nas entregas anteriores inclui busca pública, pedidos de acesso, respostas dos órgãos e recursos. Este DAS distingue dois níveis:
+
+| Nível | Abrangência | Situação |
+| --- | --- | --- |
+| Contexto do projeto | Busca pública, pedidos, análise, respostas, acompanhamento e recursos | Modelado e discutido em diferentes artefatos |
+| Recorte implementado principal | Emissão de respostas deferidas, parcialmente deferidas e indeferidas | Demonstração TypeScript da Entrega 03 |
+| Integração de todos os recortes | Uma única aplicação reunindo busca, pedidos, notificações e recursos | Não comprovada pelas fontes consultadas; não assumida neste DAS |
+
+**Incluído no recorte principal:**
+
+- representação mínima de um pedido e de um agente público;
+- criação de respostas com Factory Method;
+- validação de campos obrigatórios por tipo de resposta;
+- vinculação da resposta ao pedido;
+- alteração do pedido de `EM_ANALISE` para `RESPONDIDO`;
+- marcação da resposta como publicada no objeto em memória;
+- rejeição de resposta parcial com dados obrigatórios ausentes.
+
+**Não implementado por esse recorte:**
+
+- autenticação real via GOV.BR;
+- banco de dados e persistência durável;
+- tramitação oficial de pedidos e recursos;
+- consulta real a bases governamentais;
+- publicação de documentos em um portal público;
+- integração com um provedor real de IA generativa;
+- anonimização automática ou validação jurídica das respostas.
+
+#### 1.3 Definições, acrônimos e abreviações
+
+| Termo | Definição neste documento |
+| --- | --- |
+| DAS | Documento de Arquitetura de Software |
+| UML | Unified Modeling Language; notação de modelagem |
+| BPMN | Business Process Model and Notation; notação distinta de UML |
+| LAI | Lei de Acesso à Informação — Lei nº 12.527/2011 |
+| LGPD | Lei Geral de Proteção de Dados Pessoais — Lei nº 13.709/2018 |
+| GoF | Gang of Four; referência aos autores do catálogo clássico de padrões de projeto |
+| Factory Method | Padrão que define uma operação de criação cuja implementação varia nas subclasses |
+| Facade | Padrão que fornece uma interface simplificada para um conjunto de subsistemas |
+| Observer | Padrão que permite notificar objetos interessados em mudanças de um sujeito |
+| State | Padrão que encapsula comportamentos dependentes de estado |
+| Chain of Responsibility | Padrão que organiza possíveis tratadores de uma requisição em cadeia |
+| SIG | Softgoal Interdependency Graph, utilizado no NFR Framework |
+| Camada | Agrupamento lógico de responsabilidades; não implica uma máquina ou processo separado |
+| Pacote lógico | Agrupamento usado para explicar o modelo; não precisa corresponder a uma pasta física existente |
+| Publicar | No recorte Factory Method, alterar uma propriedade do objeto; não significa disponibilização real na internet |
 
 
 
@@ -71,5 +136,3 @@ Conforme o roteiro da Entrega 04, a modalidade escolhida neste exemplo é **DAS*
 |---|---|---|
 | André Gomes |  Criação | 22/11/2026| 
 | André Gomes e Tiago Scherrer | Desenvolvimento da entrega 4 | 22/11/2026 | 
-
-teste 1 2 3
