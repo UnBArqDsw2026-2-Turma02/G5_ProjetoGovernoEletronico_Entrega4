@@ -35,9 +35,32 @@
 
 ## FOCO 1 - DAS
 
+O foco deste relatório é escrever sobre as decisões arquiteturais do projeto, mantendo rastreabilidade com os artefatos anteriores e distinguindo o sistema conceitual das demonstrações realizadas.
+
+Conforme o roteiro da Entrega 04, a modalidade escolhida neste exemplo é **DAS**, com:
+
+- Visão Lógica;
+- Visão da Implementação como segunda visão principal;
+- evidência de funcionalidades em execução;
+- pontos de vista individuais sobre lições aprendidas e uso crítico de IA generativa.
+
+### Participantes no Foco 1
+
+| Nome do membro | Participação na Entrega 04 | Evidência |
+| --- | --- | --- |
+| André João | Desde a criação do github a gravação de video | link do Vídeo |
+| Tiago Scherrer | Desenvolvimento do Projeto | link do Vídeo| 
 
 
+### Metodologia do Foco 1
 
+1. Leitura do roteiro local da Entrega 04 e do modelo Word de Documento de Arquitetura de Software.
+2. Consulta ao módulo de Arquitetura de Software da disciplina.
+3. Levantamento do contexto e dos artefatos das Entregas 01, 02 e 03.
+4. Identificação das demonstrações de padrões da Entrega 03 e de seus limites de integração.
+5. Seleção do fluxo de emissão de respostas como recorte demonstrável, por possuir modelagem, código TypeScript e vídeo referenciado na entrega anterior.
+6. Consulta aos módulos `dominio.ts`, `resposta.ts`, `fabricas.ts`, `main.ts` e à configuração de execução da demonstração Factory Method.
+7. Elaboração das visões e das tabelas de rastreabilidade, sem executar o código nem modificar os repositórios de origem.
 
 
 
