@@ -602,7 +602,7 @@ O roteiro da disciplina solicita as lições aprendidas e uma avaliação críti
 | Nome do membro | Lições aprendidas | Uso da IA generativa com senso crítico |
 | --- | --- | --- |
 | André João | Relato individual a registrar pelo integrante | Relato individual a registrar pelo integrante |
-| Tiago Scherrer | Relato individual a registrar pelo integrante | Relato individual a registrar pelo integrante |
+| Tiago Scherrer | Aprendi a importância do padrão Factory Method para organizar a criação de objetos, além de compreender melhor a relação entre os diagramas, o código e os testes. | Usei IA generativa para comparar o rascunho do DAS com o modelo da disciplina, como apoio para compreender o código, solucionar problemas de ambiente e executar os testes. Conferi as sugestões com os arquivos e os resultados no terminal, sem aceitar as respostas automaticamente. Com isso, percebi que a IA facilita o desenvolvimento, mas suas sugestões precisam ser verificadas pelo desenvolvedor |
 
 ## Metodologia do Foco 2
 
