@@ -128,6 +128,35 @@ O domínio estudado nas entregas anteriores inclui busca pública, pedidos de ac
 | Pacote lógico | Agrupamento usado para explicar o modelo; não precisa corresponder a uma pasta física existente |
 | Publicar | No recorte Factory Method, alterar uma propriedade do objeto; não significa disponibilização real na internet |
 
+#### 1.4 Referências
+
+As referências completas e os endereços consultáveis estão na seção **Referências**, ao final deste relatório.
+
+As fontes principais são as Entregas 01, 02 e 03 [R1–R3], os relatórios de padrões [R4–R6], o código Factory Method [R7], o roteiro local [R10] e o modelo Word [R9].
+
+As referências legais [R12–R14] servem para consulta e validação pela equipe; os exemplos de código não constituem interpretação jurídica completa nem comprovação de conformidade.
+
+#### 1.5 Visão geral
+
+O documento apresenta a representação arquitetural, as metas e restrições e as visões de casos de uso, lógica, processos, implantação, implementação e dados. Ao final, discute tamanho, desempenho e qualidade.
+
+A Visão Lógica e a Visão da Implementação recebem maior detalhamento por serem as visões principais deste exemplo. As demais contextualizam o recorte sem assumir funcionalidades inexistentes.
+
+---
+
+### 2. Representação Arquitetural
+
+#### 2.1 Estado observado nas entregas
+
+Os repositórios contém documentação acadêmica e demonstrações independentes. A existência de diferentes linguagens e interfaces não comprova uma arquitetura de microsserviços.
+
+| Documentação usada | Link |
+| --- | --- |
+| Artefatos Generalistas, NFR Framework, Engenharia Reversa & Modelagem BPMN | [Entrega 1](https://unbarqdsw2026-2-turma02.github.io/2026.2-T02-_G5_ProjetoGovernoEletronico_Entrega_01/#/) |
+|  Modelagem Estática, Modelagem Dinâmica | [Entrega 2](https://unbarqdsw2026-2-turma02.github.io/2026.2-T02-_G5_ProjetoGovernoEletronico_Entrega_02/#/) |
+|  GoFs Criacionais, GoFs Estruturais, GoFs Comportamentais | [Entrega 3](https://unbarqdsw2026-2-turma02.github.io/2026.2-T02-_G5_ProjetoGovernoEletronico_Entrega_03/#/Base/Relatórios/1.1.1.SubEquipe_01) |
+
+
 
 
 ## Versionamentos
