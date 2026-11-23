@@ -606,6 +606,10 @@ André João
 
 Usei prompts, para gerar as imagens de diagramas, e para gerar um exemplo a ser seguido, e depois do exemplo que me foi gerado, comparei ele com o que outros coelgas tinham feito, e fui alterando e mexendo no que julguei melhor. Reescrevi bastante coisa, usei um pouco do que os colegas fizeram, e fui melhorando da melhor forma possível.
 
+Tiago Scherrer
+
+Utilizei a IA generativa para analisar o rascunho do DAS e compará-lo com o modelo apresentado pela disciplina, além de auxiliar na compreensão do código e na execução dos testes. A partir das respostas e sugestões obtidas, conferi as informações nos arquivos do projeto e comparei os resultados com o que era apresentado no terminal. Quando identifiquei inconsistências ou sugestões que não correspondiam ao projeto, fiz os ajustes necessários.
+
 ---
 
 ## Versionamentos
