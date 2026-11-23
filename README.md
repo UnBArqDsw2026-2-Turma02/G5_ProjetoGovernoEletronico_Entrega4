@@ -9,7 +9,7 @@
 Requer **Node.js 22.18 ou superior**. Não é necessário instalar bibliotecas.
 
 ```bash
-cd "Código"
+cd "Codigo"
 npm start
 ```
 
