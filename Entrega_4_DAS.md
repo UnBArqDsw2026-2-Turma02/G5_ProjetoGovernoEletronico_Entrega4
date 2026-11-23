@@ -48,8 +48,8 @@ Conforme o roteiro da Entrega 04, a modalidade escolhida neste exemplo é **DAS*
 
 | Nome do membro | Participação na Entrega 04 | Evidência |
 | --- | --- | --- |
-| André João | Desde a criação do github a gravação de video | link do Vídeo |
-| Tiago Scherrer | Desenvolvimento do Projeto | link do Vídeo| 
+| André João | Desde a criação do github a gravação de video | [link do Vídeo](https://youtu.be/_YWNdGMWvoI) |
+| Tiago Scherrer | Desenvolvimento do Projeto | [link do Vídeo](https://youtu.be/_YWNdGMWvoI)| 
 
 
 ## Metodologia do Foco 1
@@ -156,7 +156,58 @@ Os repositórios contém documentação acadêmica e demonstrações independent
 |  Modelagem Estática, Modelagem Dinâmica | [Entrega 2](https://unbarqdsw2026-2-turma02.github.io/2026.2-T02-_G5_ProjetoGovernoEletronico_Entrega_02/#/) |
 |  GoFs Criacionais, GoFs Estruturais, GoFs Comportamentais | [Entrega 3](https://unbarqdsw2026-2-turma02.github.io/2026.2-T02-_G5_ProjetoGovernoEletronico_Entrega_03/#/Base/Relatórios/1.1.1.SubEquipe_01) |
 
+#### 2.2 Estilo arquitetural adotado neste exemplo
 
+Para o recorte Factory Method, a caracterização mais precisa é uma **aplicação stand-alone de console, organizada em módulos com responsabilidades distintas**.
+
+A decomposição em apresentação/orquestração, coordenação de criação e domínio é usada como interpretação lógica. Não se afirma que exista uma arquitetura em camadas estrita, porque há dependências entre contratos de domínio e de criação.
+
+O Factory Method é um padrão de projeto usado dentro dessa organização. Ele não é, isoladamente, o estilo arquitetural de todo o sistema.
+
+#### 2.3 Visões utilizadas
+
+| Visão | Questão respondida | Representação neste DAS |
+| --- | --- | --- |
+| Casos de uso | Quais cenários justificam a estrutura? | Cenários de emissão e rejeição de respostas |
+| Lógica — principal | Quais responsabilidades e abstrações organizam a solução? | Pacotes conceituais, classes e contratos |
+| Processos | Como a execução ocorre? | Sequência síncrona dentro de um processo |
+| Implantação | Onde o recorte é executado? | Computador local com Node.js; documentação separada |
+| Implementação — principal | Como o modelo corresponde ao código? | Módulos, componentes, dependências e comandos |
+| Dados | Onde o estado é mantido? | Objetos em memória, sem persistência durável |
+
+
+Não são assumidos:
+
+- MVC apenas porque outro recorte utiliza React;
+- microsserviços apenas porque existem demonstrações em linguagens diferentes;
+- arquitetura distribuída de eventos apenas porque o Observer notifica objetos;
+- cliente-servidor no recorte de console apenas porque a documentação está no GitHub Pages.
+
+---
+
+### 3. Metas e Restrições da Arquitetura
+
+#### 3.1 Metas
+
+| Identificador | Meta | Fundamentação | Consequência no recorte |
+| --- | --- | --- | --- |
+| MA-01 | Reduzir o conhecimento de classes concretas no cliente de domínio | Factory Method e hierarquia de respostas [R6–R7] | `AgentePublico` recebe uma fábrica abstrata |
+| MA-02 | Concentrar campos obrigatórios de cada resposta em um ponto | Diferenças entre respostas deferidas, parciais e negativas | Cada fábrica concreta valida seus dados |
+| MA-03 | Preservar coerência entre pedido e resposta | Fluxo de emissão do recorte | Vinculação altera o status somente após criação bem-sucedida |
+| MA-04 | Explicitar limites de privacidade | Ênfase do projeto e discussões de LAI/LGPD | Não confundir preenchimento de campos com proteção completa de dados |
+| MA-05 | Permitir rastrear modelo, código e demonstração | Exigência de evidência da Entrega 04 | Relacionar classes, arquivos e cenários |
+| MA-06 | Evitar dependências externas desnecessárias na demonstração | Escopo acadêmico reduzido | Cenários locais sem depender de APIs governamentais |
+
+#### 3.2 Restrições
+
+- Manter o domínio e os artefatos das entregas anteriores como base, explicitando divergências.
+- Não afirmar que todas as demonstrações já compõem um produto integrado.
+- Não apresentar a autenticação GOV.BR modelada como uma integração pronta.
+- Não tratar a enumeração completa de estados como implementação de todas as transições.
+- Não confundir o BPMN chamado de “Diagrama de Estado” na Entrega 02 com uma máquina de estados UML. A distinção foi reconhecida no relatório da [Entrega 03](https://unbarqdsw2026-2-turma02.github.io/2026.2-T02-_G5_ProjetoGovernoEletronico_Entrega_03/#/Base/1.3.IniciativasExtras) [R6, R8].
+- Não atribuir à existência de campos legais uma garantia de legalidade, confidencialidade ou anonimização.
+- Não apresentar saídas esperadas como resultados executados durante a elaboração deste documento.
+- Confirmar responsáveis, datas e evidências da Entrega 04 antes da publicação.
 
 
 ## Versionamentos
@@ -165,3 +216,5 @@ Os repositórios contém documentação acadêmica e demonstrações independent
 |---|---|---|
 | André Gomes |  Criação | 22/11/2026| 
 | André Gomes e Tiago Scherrer | Desenvolvimento da entrega 4 | 22/11/2026 | 
+| André Gomes e Tiago Shcerrer | Adição dos Tópico DAS, e dos subtópicos 1, 2, 3 | 22/11/2026|
+
